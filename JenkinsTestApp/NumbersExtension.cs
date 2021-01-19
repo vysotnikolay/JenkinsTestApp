@@ -27,12 +27,12 @@ namespace BitOperations
             int digitsQuantity = sizeof(int) * 8;
             if ((i < 0) || (i > digitsQuantity - 1))
             {
-                throw new ArgumentOutOfRangeException(nameof(i), "i range is from 0 to 31 (including)");
+                throw new ArgumentOutOfRangeException("i", "i range is from 0 to 31 (including)");
             }
 
             if ((j < 0) || (j > digitsQuantity - 1))
             {
-                throw new ArgumentOutOfRangeException(nameof(j), "j range is from 0 to 31 (including)");
+                throw new ArgumentOutOfRangeException("j", "j range is from 0 to 31 (including)");
             }
 
             int mask = GetMask(j - i + 1, digitsQuantity);
